@@ -34,7 +34,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 sceneDelegate.window?.makeKeyAndVisible()
             }
         } else {
-            let ac = UIAlertController(title: "Authentication failed", message: "You could not be verified, please try again.", preferredStyle: .alert)
+            let ac = UIAlertController(title: "Authentication failed", message: "login = user,\npassword = pass", preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(ac, animated: true)
         }
