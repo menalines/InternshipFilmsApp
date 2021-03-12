@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchTableViewController" customModule="Internship_Cogniteq" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="33" id="U9H-Ye-fS1" customClass="SearchCell" customModule="Internship_Cogniteq" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="334" height="33"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U9H-Ye-fS1" id="xNy-Du-Fs1">
+                <rect key="frame" x="0.0" y="0.0" width="334" height="33"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPf-oA-ZKw">
+                        <rect key="frame" x="4" y="4" width="277" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.forward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="kfe-DS-Kkc">
+                        <rect key="frame" x="314" y="4" width="18" height="14.5"/>
+                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="5Pq-D6-NdF"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="18" id="5mG-Qj-Vxr"/>
+                            <constraint firstAttribute="width" constant="18" id="A2C-bz-lMf"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="18" id="goN-Yv-xBV"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2020" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IqJ-5K-AEl">
+                        <rect key="frame" x="283" y="2" width="31" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="bca-99-1FQ"/>
+                            <constraint firstAttribute="width" constant="31" id="yqM-og-ycD"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="kfe-DS-Kkc" firstAttribute="top" secondItem="xNy-Du-Fs1" secondAttribute="top" constant="2" id="6PC-i0-jq3"/>
+                    <constraint firstItem="kfe-DS-Kkc" firstAttribute="leading" secondItem="IqJ-5K-AEl" secondAttribute="trailing" id="KOT-NS-coi"/>
+                    <constraint firstItem="IqJ-5K-AEl" firstAttribute="leading" secondItem="VPf-oA-ZKw" secondAttribute="trailing" constant="2" id="QHN-6i-Ir0"/>
+                    <constraint firstAttribute="trailing" secondItem="kfe-DS-Kkc" secondAttribute="trailing" constant="2" id="U5B-3e-Hjf"/>
+                    <constraint firstItem="VPf-oA-ZKw" firstAttribute="top" secondItem="xNy-Du-Fs1" secondAttribute="top" constant="4" id="jWA-0D-ekx"/>
+                    <constraint firstItem="IqJ-5K-AEl" firstAttribute="top" secondItem="xNy-Du-Fs1" secondAttribute="top" constant="2" id="mjX-XZ-2Pu"/>
+                    <constraint firstItem="VPf-oA-ZKw" firstAttribute="leading" secondItem="xNy-Du-Fs1" secondAttribute="leading" constant="4" id="udr-0V-ULv"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="KjQ-p2-Udv"/>
+            <connections>
+                <outlet property="titleLabel" destination="VPf-oA-ZKw" id="Kpd-Rz-ZuP"/>
+                <outlet property="yearLabel" destination="IqJ-5K-AEl" id="g8a-jQ-eIo"/>
+            </connections>
+            <point key="canvasLocation" x="47.826086956521742" y="-51.897321428571423"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="chevron.forward" catalog="system" width="96" height="128"/>
+    </resources>
+</document>
