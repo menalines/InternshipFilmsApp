@@ -56,3 +56,26 @@ struct LoginView: View {
 final class LoginState: ObservableObject {
     var controller: LoginViewProtocol?
 }
+
+struct UsernameTextField : View {
+    @Binding var username: String
+    
+    var body: some View {
+        return TextField("Username", text: $username)
+            .autocapitalization(.none)
+            .padding(10)
+            .background(Color(UIColor.systemGray5))
+            .cornerRadius(10)
+    }
+}
+
+struct PasswordSecureField : View {
+    @Binding var password: String
+    
+    var body: some View {
+        return SecureField("Password", text: $password)
+            .padding(10)
+            .background(Color(UIColor.systemGray5))
+            .cornerRadius(10)
+    }
+}

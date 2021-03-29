@@ -18,7 +18,6 @@ struct SearchRow: View {
                     .lineLimit(2)
                     .font(.headline)
                     .frame(maxWidth: .infinity, alignment: .leading)
-
             }
             .padding(.leading, 10)
             .font(.system(size: 12))

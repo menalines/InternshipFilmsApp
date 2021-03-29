@@ -7,6 +7,10 @@
 import SwiftUI
 import UIKit
 
+protocol LoginViewProtocol {
+    func openMainView()
+}
+
 final class LoginController: UIHostingController<LoginView>, LoginViewProtocol {
     private let state = LoginState()
     
@@ -37,32 +41,5 @@ final class LoginController: UIHostingController<LoginView>, LoginViewProtocol {
             sceneDelegate.window?.rootViewController = tabController
             sceneDelegate.window?.makeKeyAndVisible()
         }
-    }
-}
-
-protocol LoginViewProtocol {
-    func openMainView()
-}
-
-struct UsernameTextField : View {
-    @Binding var username: String
-    
-    var body: some View {
-        return TextField("Username", text: $username)
-                .autocapitalization(.none)
-                .padding(10)
-                .background(Color(UIColor.systemGray5))
-                .cornerRadius(10)
-        }
-}
-
-struct PasswordSecureField : View {
-    @Binding var password: String
-    
-    var body: some View {
-        return SecureField("Password", text: $password)
-            .padding(10)
-            .background(Color(UIColor.systemGray5))
-            .cornerRadius(10)
     }
 }
