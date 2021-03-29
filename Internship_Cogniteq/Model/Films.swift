@@ -6,14 +6,16 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Films: Codable {
+    
     let page: Int?
-    let results: [Results]?
+    let results: [Results]
     let totalResults: Int?
     let totalPages: Int?
     
-    struct Results: Codable {
+    struct Results: Codable, Hashable {
         let posterPath: String?
         let adult: Bool?
         let overview: String?
@@ -31,6 +33,10 @@ struct Films: Codable {
     }
 }
 
+struct Response: Codable {
+    var items: [Films]
+}
+
 extension Films.Results {
     func getYear() -> String {
         guard let stringDate = releaseDate else {
@@ -43,7 +49,7 @@ extension Films.Results {
         guard let date = dateFormatter.date(from: stringDate) else {
             return ""
         }
-        
+
         dateFormatter.dateFormat = "yyyy"
         
         return dateFormatter.string(from: date)

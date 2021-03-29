@@ -15,20 +15,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else {
             return
         }
+        
         let window = UIWindow(windowScene: scene)
-        window.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+        window.rootViewController = LoginController()
         self.window = window
         window.makeKeyAndVisible()
     }
-
-    func sceneDidDisconnect(_ scene: UIScene) { }
-
-    func sceneDidBecomeActive(_ scene: UIScene) { }
-
-    func sceneWillResignActive(_ scene: UIScene) { }
-
-    func sceneWillEnterForeground(_ scene: UIScene) { }
-
-    func sceneDidEnterBackground(_ scene: UIScene) { }
 }
 
